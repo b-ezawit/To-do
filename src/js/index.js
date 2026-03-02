@@ -147,10 +147,10 @@ document.body.addEventListener("click", (e)=>{
             dueDate : card.querySelector(".edit-date").value
         }
         dom.updateCardText(card,updatedData);
+        dom.showNormalView(card);
         let project = storage.restoreLocal();
         project.updateTask(cardId,updatedData);
         storage.saveLocal(project);
-        dom.showNormalView(card);
     }
 });
 
